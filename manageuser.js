@@ -38,7 +38,7 @@ function checkexpiredtoken(token){
     usertoken = localStorage.getItem("token");
     $.ajax({
        type: 'GET',
-        url: '/validate/'+token,
+        url: 'validate/'+token,
         data: JSON.stringify({usertoken}),
         success: function(data){savetoken(data)},
         contentType: "application/text",
